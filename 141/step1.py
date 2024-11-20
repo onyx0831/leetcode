@@ -10,10 +10,10 @@ class Solution:
         now_point = head
         done_point = set()
 
-        while now_point.next is not None:
-            done_point.add(now_point.val)
+        while now_point is not None and now_point.next is not None:
+            done_point.add(now_point)
             now_point = now_point.next
-            if now_point.val in done_point:
+            if now_point in done_point:
                 return True
     
         return False

@@ -58,3 +58,31 @@ class Solution:
 # step3
 
 - 修正済みコードを書いて覚える
+
+# step4
+
+- レビューを元に書き直し
+
+```python
+class Solution:
+    def hasCycle(self, head:Optional[ListNode]) -> bool:
+        visited = set()
+        node = head
+        while node is not None:
+            if node in visited:
+                return True
+            visited.add(node)
+            node = node.next
+        return False
+```
+
+```python
+class Solution:
+    def hasCycle(self, head:Optional[ListNode]) -> bool:
+        fast, slow = head, head
+        if fast is not None and fast.next is not None:
+            fast, slow = fast.next.next, slow.next
+            if fast == slow:
+                return True
+        return False
+```

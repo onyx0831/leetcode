@@ -33,6 +33,7 @@ class Solution:
             visited.add(current)
             current = current.next
         return False
+
 ```
   
 # 他の人のコードを参考にする
@@ -53,6 +54,7 @@ class Solution:
             if fast == slow:
                 return True
         return False
+
 ```
 
 # step3
@@ -74,6 +76,7 @@ class Solution:
             visited.add(node)
             node = node.next
         return False
+
 ```
 
 ```python
@@ -85,4 +88,5 @@ class Solution:
             if fast == slow:
                 return True
         return False
+        
 ```

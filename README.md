@@ -5,3 +5,11 @@
   - 問題へのリンク
   - 問題文概要(プレミアムの場合)
   - 次に解く問題の予告など
+
+- 環境構築
+```bash
+brew install uv
+uv init
+uv sync
+. .venv/bin/activate
+```
